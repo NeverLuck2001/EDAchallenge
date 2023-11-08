@@ -125,6 +125,7 @@ for i in range(count-1):
         f5 = len(op_dic) - 1
         f5 = np.expand_dims(np.array(float(f5)), axis=0)[:, np.newaxis]
 
+    num = np.expand_dims(np.array(i), axis=0)[:, np.newaxis]
     arr = np.array([])[:, np.newaxis]
-    arr = np.concatenate((arr,f1,x_pos,y_pos,f2,power,f3,f4,f5,wd), axis=0)
+    arr = np.concatenate((arr,f1,x_pos,y_pos,f2,power,f3,f4,f5,wd,num), axis=0)
     np.save(np_final_path + '/'+ str(i), arr)
